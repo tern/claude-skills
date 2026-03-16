@@ -32,7 +32,20 @@ for skill_dir in "$REPO_DIR"/*/; do
   fi
 done
 
-# 3. 設定 PM2 排程（若有 PM2）
+# 3. 設定 post-commit hook（每次 commit 後自動 push）
+HOOK_FILE="$REPO_DIR/.git/hooks/post-commit"
+if [ ! -f "$HOOK_FILE" ]; then
+  cat > "$HOOK_FILE" <<'HOOK'
+#!/usr/bin/env bash
+git push origin main 2>&1 | sed 's/^/[claude-skills] /'
+HOOK
+  chmod +x "$HOOK_FILE"
+  echo "[claude-skills-sync] post-commit hook 已設定（commit 後自動 push）"
+else
+  echo "[claude-skills-sync] post-commit hook 已存在，跳過"
+fi
+
+# 4. 設定 PM2 排程（若有 PM2）
 if command -v pm2 >/dev/null 2>&1; then
   if ! pm2 list | grep -q "claude-skills-sync"; then
     pm2 start "$REPO_DIR/sync.sh" --name "claude-skills-sync" --cron "47 8 * * *" --no-autorestart
