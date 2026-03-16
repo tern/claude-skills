@@ -8,6 +8,7 @@ Personal Claude Code skills collection — productivity tools for managing memor
 |-------|------|------|--------|
 | [memory-optimizer](./memory-optimizer/) | `/memory-optimize` | 壓縮記憶檔，減少 token 消耗 | 每日 08:23 |
 | [claude-skills-sync](./claude-skills-sync/) | `/claude-skills-sync` | 偵測變更並 push 到 GitHub | 每次 commit + 每日 08:47 |
+| [array30-diagnose](./array30-diagnose/) | `/array30-diagnose` | Steam Deck 行列30診斷 + 自動解讀修復建議 | 手動 |
 
 ---
 
