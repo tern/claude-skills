@@ -24,4 +24,3 @@ bash ~/claude-skills/claude-skills-sync/install.sh
 npx skills add tern/claude-skills@memory-optimizer
 npx skills add tern/claude-skills@claude-skills-sync
 ```
-# auto-push via post-commit hook
