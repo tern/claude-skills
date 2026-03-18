@@ -10,6 +10,7 @@ Personal Claude Code skills collection — productivity tools for managing memor
 | [claude-skills-sync](./claude-skills-sync/) | `/claude-skills-sync` | 偵測變更並 push 到 GitHub | 每次 commit + 每日 08:47 |
 | [array30-diagnose](./array30-diagnose/) | `/array30-diagnose` | Steam Deck 行列30診斷 + 自動解讀修復建議 | 手動 |
 | [array30-install](./array30-install/) | `/array30-install` | 行列30安裝引導（SteamOS + Ubuntu） | 手動 |
+| [vllm-setup](./vllm-setup/) | `/vllm-setup` | Steam Deck gfx1033 ROCm vllm 安裝、診斷、啟動 | 手動 |
 
 ---
 
@@ -57,9 +58,12 @@ bash ~/claude-skills/claude-skills-sync/install.sh
 ├── memory-optimizer/
 │   ├── SKILL.md               ← /memory-optimize 指令定義
 │   └── run.sh                 ← 獨立執行腳本（PM2 用）
-└── claude-skills-sync/
-    ├── SKILL.md               ← /claude-skills-sync 指令定義
-    └── install.sh             ← 新機器一鍵安裝
+├── claude-skills-sync/
+│   ├── SKILL.md               ← /claude-skills-sync 指令定義
+│   └── install.sh             ← 新機器一鍵安裝
+└── vllm-setup/
+    ├── SKILL.md               ← /vllm-setup 指令定義（快速啟動）
+    └── REFERENCE.md           ← 完整建置步驟 + 12 個 patch 說明
 
 ~/.claude/skills/
 ├── memory-optimizer    → ~/claude-skills/memory-optimizer  (symlink)
