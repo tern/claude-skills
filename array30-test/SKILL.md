@@ -1,6 +1,6 @@
 ---
 name: array30-test
-description: Run VM-based integration tests for array30-install.sh on Ubuntu 24.04. Use when user wants to test array30 installation, run VM tests, test ibus-array or fcitx5-array engine, debug create-vm.sh, or validate array30-install changes.
+description: Run and debug VM-based integration tests for array30-install.sh on Ubuntu 24.04. Use when user wants to test array30 installation, run VM tests, test ibus-array or fcitx5-array engine, debug or understand create-vm.sh phases/logic, manage KVM snapshots, or validate array30-install changes.
 ---
 
 # array30-test
@@ -108,3 +108,12 @@ Phase C 成功後 create-vm.sh 會：
 ## 常見問題
 
 詳見 [KNOWN_ISSUES.md](KNOWN_ISSUES.md)
+
+## create-vm.sh 深度解析
+
+詳見 [CREATE_VM.md](CREATE_VM.md)，包含：
+- 各 Phase 步驟逐一解釋（含踩坑原因）
+- 快照感知選單邏輯
+- AUTO_YES 行為說明
+- 工具函式速查表
+- 16 個 CHANGELOG 踩坑完整對照
